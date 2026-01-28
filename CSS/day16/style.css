@@ -1,0 +1,52 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+       
+
+}
+body{
+    height: 100vh;
+    width: 100vw;
+     padding: 2rem;
+}
+.containre{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1rem;
+   
+}
+.box{
+    background-color: yellowgreen;
+    font-size: 2rem;
+    border: 5px solid black;
+    height: 200px;
+    width: 200px;
+    transition: all 3s linear;
+}
+.Rotate-x:hover{
+    transform: rotatex(90deg);
+}
+.box2:hover{
+    transform: rotatey(67deg);
+}
+.box4:hover{
+    transform: translatex(100px);
+}
+.box5:hover{
+    transform: translatey(200px);
+}
+.box6:hover{
+    transform:perspective(200px) translatez(100px);
+}
+.box7:hover{
+    transform: scalex(2);
+}
+.box8:hover{
+    transform: scaley(2);
+}
+.box1:hover{
+    transform:perspective(100px) rotatey(90deg) scalez(2);
+}

@@ -1,0 +1,20 @@
+
+*{
+    margin: 0;
+}
+/* without using margin only use top 0 left o right 0 because its work viewport */
+header{
+    background-color:khaki;
+    position: fixed;
+    width: 100%;
+    /* top: 0;
+    left: 0;
+    right: 0; */
+  
+}
+/* in fixed position element leave our space  */
+/* padding use to create in box of content */
+main{
+    padding-top: 40px;
+    /* margin-top: 40px; */
+}

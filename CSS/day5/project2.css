@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+}
+.first{
+    background-color: brown;
+    /* height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    margin: auto;
+    margin-top: 300px; */
+    height: 60vh;
+    width: 60vh;
+    border-radius: 50%;
+    margin: auto;
+    margin-top: 20vh;
+}

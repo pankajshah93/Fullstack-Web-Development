@@ -1,0 +1,9 @@
+h1 >p{
+    background-color: aquamarine;
+}
+p>h1{
+    background-color: aquamarine;
+}
+div{
+    background-color: blue;
+}
