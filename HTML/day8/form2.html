@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>employee details form
+    </h1>
+    <form>
+        <label for="name">full name</label>
+        <input type="text" id="name" name="username" required placeholder="enter your full name">
+        <br>
+        <br>
+        <label for="name">emailid</label>
+        <input type="email" id="emailid" name="usermail" required placeholder="enter your mail id">
+        <br>
+        <br>
+        <label for="phone">password</label>
+        <input type="number" id="phone" name="no" required placeholder="enter your number">
+        <br>
+        <br>
+        <label>gender:</label>
+        <!-- this name tag use grouping element in single value -->
+
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">female</label>
+        <input type="radio" id="others" name="gender" value="others">
+        <label for="others">others</label>
+
+        <br>
+        <br>
+        <label for="title">job title</label>
+        <input type="text" id="title" name="job title" required placeholder=" your job title">
+
+        <br>
+        <br>
+        <label for="department">department
+        </label>
+        <select id="department" name="department">
+            <option value="" disabled selected>select your department </option>
+            <!-- disabled selected in this use not select this elemnet  -->
+            <option value="it">it</option>
+             <option value="civil">civil</option>
+            <option value="number">it</option>
+
+        </select>
+        <br>
+        <br>
+        <button>submit</button>
+        <!-- username=pankaj&usermail=juuuh%40gmail.com&no=7884455&gender=female&job+title=efde&department=number -->
+
+    </form>
+</body>
+
+</html>

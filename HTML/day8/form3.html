@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>iit jee registration form</h2>
+    <form action="url-server to send backend">
+        <fieldset>
+            <!-- fieldset is use for grouping form element in one box and se group name -->
+            <!-- legend is write midile of field line -->
+            <legend>iit  jee registration </legend>
+
+        <label for="name">full name</label>
+        <input type="text" id="name" name="username">
+        <br>
+        <br>
+         <label for="email">email:</label>
+        <input type="email" id="email" name="usermail">
+        <br>
+        <br>
+         <label for="phone">phone:</label>
+        <input type="number" id="phone" name="phone">
+        <br>
+        <br>
+         <label for="pass">password:</label>
+        <input type="password" id="pass" name="password">
+        <br>
+        <br>
+         <label>gender:</label>
+        <input type="radio" id="male" name="gender">
+        <label for="male">male</label>
+         <input type="radio" id="female" name="gender">
+        <label for="female">female</label>
+         <input type="radio" id="other" name="gender">
+        <label for="other">other</label>
+        <br>
+        <br>
+         <label for="dob">dob:</label>
+        <input type="date" id="dob" name="dob">
+        <br>
+        <br>
+        <fieldset>
+            <legend>education info</legend>
+         <label for="school">school name:</label>
+        <input type="text" id="school" name="school name">
+        <br>
+        <br>
+         <label for="board">board:</label>
+       <select id="board">
+        <option value="" disabled selected>select your board</option>
+        <option value="bihar">bihar</option>
+        <option value="up">up</option>
+        <option value="chhatti">chhatti</option>
+       </select>
+        <br>
+        <br>
+        <label for="year">year of passing:</label>
+        <input type="number" id="year" name="year" min="2023" max="2025">
+        <br>
+        <br>
+        <label for="center">select exam center:</label>
+       <select id="center">
+        <option value="" disabled selected>select your center</option>
+        <option value="bihar">bihar</option>
+        <option value="up">up</option>
+        <option value="chhatti">chhatti</option>
+       </select>
+        <br>
+        <br>
+        </fieldset>
+        <button>submit</button>
+        </fieldset>
+    </form>
+
+</body>
+</html>

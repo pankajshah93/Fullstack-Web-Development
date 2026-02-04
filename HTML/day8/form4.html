@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>health details form</h1>
+    <form>
+        <fieldset>
+            <legend>personal information</legend>
+            <label for="name">full name:  </label>
+            <input type="text" id="name" name="username">
+            <br>
+            <br>
+            <label for="dob">dob:  </label>
+            <input type="date" id="dob" name="dob">
+            <br>
+            <br>
+            <label for="gender">gender: </label>
+            <select id="gender">
+                <option value="male">male</option>
+                <option value="female">female</option>
+                <option value="other">other</option>
+            </select>
+            <br>
+            <br>
+            <label for="phone">phone number:  </label>
+            <input type="number" id="phone" name="usernumber">
+            <br>
+            <br>
+        </fieldset>
+        <fieldset>
+            <legend>medical info</legend>
+            <label for="blood">blood group: </label>
+            <select id="blood">
+                <option value="a+">a+</option>
+                <option value="b+">b+</option>
+                <option value="o+">o+r</option>
+            </select>
+            <br>
+            <br>
+            <label>do you wear the glass</label>
+            <br>
+            
+            <input type="radio" id="yes" name="glass">
+            <label for="yes">yes</label>
+            <input type="radio" id="no" name="glass">
+            <label for="no">no</label>
+            <br>
+            <br>
+            <label for="text">pre existing condition</label>
+            <textarea id="text"></textarea>
+            <br>
+            <br>
+            <label>alergies</label>
+            <br>
+            
+            <input type="checkbox" id="polio" name="alergies">
+            <label for="polio">polio</label>
+            <br>
+            <input type="checkbox" id="none" name="alergies">
+            <label for="none">none</label>
+            <br>
+            <br>
+
+        </fieldset>
+        <button>submit</button>
+    </form>
+</body>
+</html>
