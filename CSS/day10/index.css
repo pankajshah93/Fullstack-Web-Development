@@ -1,0 +1,55 @@
+.container{
+    height: 700px;
+    background-color: aquamarine;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    /* start center end space around space evenly space between */
+    /*flex wrap ke bad hi align content use kar sakte hai align content is remove space between next line content  */
+}
+
+.box1{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+}
+.box2{
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+}
+.box3{
+    height: 100px;
+    width: 100px;
+    background-color: black;
+}
+.box4{
+    height: 100px;
+    width: 100px;
+    background-color: yellow;
+}
+.box5{
+    height: 100px;
+    width: 100px;
+    background-color: violet;
+}
+.box6{
+    height: 100px;
+    width: 100px;
+    background-color: brown;
+}
+.box7{
+    height: 100px;
+    width: 100px;
+    background-color: magenta;
+}
+.box8{
+    height: 100px;
+    width: 100px;
+    background-color: palegoldenrod;
+}
+.box9{
+    height: 100px;
+    width: 100px;
+    background-color: cadetblue;
+}

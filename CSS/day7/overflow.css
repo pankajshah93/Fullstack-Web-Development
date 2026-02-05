@@ -1,0 +1,11 @@
+.container{
+    height: 400px;
+    width: 400px;
+
+    background-color: aquamarine;
+    overflow: scroll;
+}
+/* by default overflow is visible */
+/* overflow is hidden overflow content are not show */
+/* overflow scroll all overflow content are in scroll */
+/* overflow auto set karne pe need ke acording scroll bar deta hai */

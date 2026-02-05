@@ -1,0 +1,19 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: capitalize;
+}
+.first{
+    background-color: green;
+}
+.second{
+    color: blue;
+}
+h3{
+    color: rgb(193, 37, 63);
+}
+.js{
+    color: brown;
+}
+.respons{
+    color: purple;
+}

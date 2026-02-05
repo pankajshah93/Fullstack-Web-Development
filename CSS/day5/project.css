@@ -1,0 +1,41 @@
+/* in pixel website is not resposive acording to viewport so try in % and vh rem use */
+*{
+    margin: 0;
+
+}
+
+.first, .third{
+    display: inline-block;
+    background-color: red;
+    height: 40vh;
+    width: 25vw;
+}
+.second,.fourth{
+    display: inline-block;
+    background-color: red;
+   height: 40vh;
+    width: 60vw;
+}
+/* .first{
+    
+    margin-right: 14vw;
+} */
+ /* space between div is also print so write inon line  */
+.second,.fourth{
+    margin-left: 15vw;
+}
+.third,.fourth{
+    margin-top: 20vh;
+}
+/* .third{
+    background-color: red;
+     height: 30vh;
+    width: 25vw;
+} */
+
+/* .fourth{
+    background-color: red;
+   height: 30vh;
+    width: 50vw;
+} */
+  

@@ -1,0 +1,40 @@
+h2{
+     background-color: antiquewhite;
+   width: 300px;
+   height: 300px;
+   border-radius: 10px;
+   border:2px solid rgb(153, 104, 44);
+   padding:10px ;
+
+}
+/* any direction you can set border style color */
+h3{
+    /* background-color: darkcyan;
+    border-left-width: 6px ;
+    border-left-color: rgb(248, 147, 24);
+    border-left-style: solid; */
+    /* top and bottom /left and right */
+    /* border-width: 10px 20px;
+    border-color: black;
+    border-style: solid; */
+     border-width: 10px 20px 10px;
+     /* top/left and right/bottom */
+    border-color: black;
+    border-style: solid;
+    /* we have two option for border width it 
+    will allocated top and bottom or left and right;  */
+}
+h4{
+    border-width: 10px 20px 30px 40px;
+    border-color: brown;
+    border-style: solid;
+    margin: 10px 20px 30px 40px;
+    /* margin are also set left right bottom */
+}
+p{
+    background-color: brown;
+    border-width: 10px;
+    border-color: rgb(253, 248, 107);
+    border-style: double;
+    padding: 5px;
+}
