@@ -1,0 +1,47 @@
+body{
+    /* using this margin and padding default space is remove */
+    margin: 0; 
+    padding: 0;
+    font-family: sans-serif;
+}
+h1{
+    color: white;
+    line-height: 1;
+    font-size: 35px;
+    letter-spacing: 0.25rem;
+}
+.preloader{
+    padding: 0;
+    margin: 0;
+    z-index: 1;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right:0;
+    bottom: 0;
+    background-color: white;
+    transition: 0.3s linear;
+}
+header{
+   height:  100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* display: grid;
+    align-items: center; */
+}
+.background-video{
+    position: absolute;
+    top:0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(30%);
+    /* many options are availabale */
+
+}
