@@ -1,0 +1,40 @@
+.container{
+    display :flex;
+    background-color: aqua;
+    height: 700px;
+    align-items: center;
+    justify-content: center;
+}
+.box{
+    height: 100px;
+    width: 100px;
+    border:2px solid black;
+}
+/* flex item */
+/* bydefault order is 0 */
+/* oreder it define the order of element */
+/* flex grow in main acces */
+/* align for perticuler item select and use cross directio */
+.box1{
+    background-color: red;
+   /* flex-grow: 1; */
+   /* align-self: flex-start; */
+   /* flex sorthand flae:flex:grow flex-shrink flex-basis  */
+
+   flex:2 5 300px
+}
+/* flex basis increase in main acces over the widht */
+.box2{
+    background-color: blue;
+    /* flex-shrink: 2; */
+    /* flex-basis: 300px; */
+}
+.box3{
+    background-color: yellow;
+     /* order:-1; */
+     /* flex-shrink: 3; */
+}
+.box4{
+    background-color: pink;
+    /* flex-grow: 1; */
+}
