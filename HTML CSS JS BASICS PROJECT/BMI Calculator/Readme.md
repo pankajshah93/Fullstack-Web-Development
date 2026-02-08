@@ -1,43 +1,39 @@
-BMI Calculator
 
-A simple BMI Calculator using HTML, CSS, and JavaScript.
 
-Features
+## BMI Calculator
 
-Enter height (cm)
+A simple **BMI Calculator** using **HTML, CSS, and JavaScript**.
 
-Enter weight (kg)
+### Features
 
-Calculate BMI
+* Enter height (cm)
+* Enter weight (kg)
+* Calculate BMI
+* Shows weight condition
 
-Shows weight condition
+### Tech Used
 
-Tech Used
+* HTML
+* CSS
+* JavaScript
 
-HTML
+### How to Use
 
-CSS
+1. Open `index.html`
+2. Enter height and weight
+3. Click **Compute BMI**
+4. See BMI result
 
-JavaScript
-
-How to Use
-
-Open index.html
-
-Enter height and weight
-
-Click Compute BMI
-
-See BMI result
-
-Formula
+### Formula
 
 BMI = weight / (height × height)
 
-Project Files
+### Project Files
 
-index.html
+* `index.html`
+* `style.css`
+* `function.js`
 
-style.css
+---
 
-function.js
+
