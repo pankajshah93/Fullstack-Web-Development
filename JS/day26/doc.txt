@@ -1,0 +1,18 @@
+arr.sort ();
+[10,20,100]its not consider as array its consider as string 
+isi liye ye sort nahi hote
+in this sort work in [10,100,20] because its work on bits 
+compare first number 10 and 20 10 is small then 20 and 100 bit compare
+100 small
+
+
+ //if you want to work properly then colparison operator add 
+ arr.sort( call back function )
+ arr.sort((a,b)=>{
+
+ })
+ if this is return -ve then b,a
+ if this is return +ve then a,b
+ if this is return 0 then same 
+ 
+

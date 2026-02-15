@@ -1,0 +1,57 @@
+dom ducument obfect model 
+
+the dom (document object model) is a way to represent a web page so that
+program like javascript  can interact with it 
+
+ a browser  takes your html socument and turns it into the dom 
+ with the object model javascript gets all the power it needs to create 
+
+
+html page mein javascript lagane ke liye use object me badalna hoga
+dom as a object create
+
+ first create html page and then ----conveert---dom(object) 
+
+ after converting object apply javascript
+
+ in html page in dom all element treate as object
+
+
+ //hirearchy of dom
+    window
+      |
+     document
+         |
+     html
+        |
+        head                                body
+     meta,meta cha title                     |   
+                    |                       div    
+                    name(text node)          |  
+                                          h1,h2,ul       
+                                           |
+                                                          
+
+
+a.  Accesing element by id;
+  method document.getelementbyid(id)
+  description retrives a single element with the specified id attribute
+
+
+b.  Accesing element by classname;
+  method document.getelementbyclassname(classname)
+  description return  a live htmlcollection of all element with the 
+  the specified class name
+
+
+const obj1=document.getElementsByClassName("mohan");
+undefined
+obj1[0].style.backgroundColor="Pink";
+'Pink'
+
+
+
+obj.tagName
+'H1'
+obj.style
+CSSStyleDeclaration {accentColor: '', additiveSymbols: '', alignContent: '', alignItems: '', alignSelf: '', …}

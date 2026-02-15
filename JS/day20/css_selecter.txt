@@ -1,0 +1,250 @@
+c:Accesing by css selection 
+    1  single element :
+    method:document queryselectorid(selector )
+    description return the first element matching the specified css 
+    selector
+    2:multuple element :
+    method document querySelectorAll(selector)
+    description return a static nodelist of all element matching the
+    specified css selector
+
+    document.querySelectorAll("header1")
+NodeList []length: 0[[Prototype]]: 
+NodeListentries: ƒ entries()forEach: ƒ forEach()item: ƒ item()keys: ƒ keys()length: (...)values: ƒ values()constructor: 
+ƒ NodeList()Symbol(Symbol.iterator): ƒ values()Symbol(Symbol.toStringTag): "NodeList"get length: ƒ length()[[Prototype]]: Object
+
+
+
+document.querySelectorAll('.header1')
+NodeList(2) [h1#first.header1, h2#second.header1]0: 
+h1#first.header11: h2#second.header1length: 2[[Prototype]]: 
+NodeListentries: ƒ entries()forEach: ƒ forEach()item: ƒ item()keys: ƒ keys()length: 
+(...)values: ƒ values()constructor: ƒ NodeList()Symbol(Symbol.iterator): ƒ values()Symbol(Symbol.toStringTag): 
+"NodeList"get length: ƒ length()[[Prototype]]: Object
+
+
+//select heading rows  in as array type
+obj[0]
+<h1 id=​"first" class=​"header1" style=​"background-color:​ pink;​">​hello mini​</h1>​
+obj[1]
+<h2 id=​"second" class=​"header1">​topics covered so far ​</h2>​
+
+iterate over node list in three types
+
+for(i=0;i<obj.length;i++)
+    console.log(obj[i])
+VM867:2 <h1 id=​"first" class=​"header1" style=​"background-color:​ pink;​">​hello mini​</h1>​
+VM867:2 <h2 id=​"second" class=​"header1">​topics covered so far ​</h2>​
+undefined
+
+for(i=0;i<obj.length;i++)
+    console.log(obj[0])
+VM878:2 <h1 id=​"first" class=​"header1" style=​"background-color:​ pink;​">​hello mini​</h1>​
+VM878:2 <h1 id=​"first" class=​"header1" style=​"background-color:​ pink;​">​hello mini​</h1>​
+
+
+//changed style in our page 
+const obj=document.querySelectorAll('.header1')
+undefined
+for(i=0;i<obj.length;i++)
+    obj[i].style.color="red";
+'red'
+
+
+//using forof to interate
+for(let val of obj)
+    console.log(val)
+   <h1 id ="first" class="header1">hello pankaj shah </h1>
+    <h2 id="second" class="header1">topics covered so far </h2>
+
+
+//using foreach 
+obj.forEach((val)=>{
+    console.log(val)})
+
+     <h1 id ="first" class="header1">hello pankaj shah </h1>
+    <h2 id="second" class="header1">topics covered so far </h2>
+
+
+
+//convert into array for apply all aoperation in data
+const obj=document.querySelectorAll('.header1')
+undefined
+obj
+NodeList(2) [h1#first.header1, h2#second.header1]
+Array.from(obj)
+(2) [h1#first.header1, h2#second.header1]0: 
+h1#first.header11: h2#second.header1length:
+ 2[[Prototype]]: Array(0)at: ƒ at()concat: ƒ concat()constructor: 
+ ƒ Array()copyWithin: ƒ copyWithin()entries: ƒ entries()every: 
+ ƒ every()fill: ƒ fill()filter: ƒ filter()find: ƒ find()findIndex: 
+ ƒ findIndex()findLast: ƒ findLast()findLastIndex: ƒ findLastIndex()flat: 
+ ƒ flat()flatMap: ƒ flatMap()forEach: ƒ forEach()includes: ƒ includes()indexOf: 
+ ƒ indexOf()join: ƒ join()keys: ƒ keys()lastIndexOf: ƒ lastIndexOf()length: 0map: 
+ ƒ map()pop: ƒ pop()push: ƒ push()reduce: ƒ reduce()reduceRight: ƒ reduceRight()reverse:
+  ƒ reverse()shift: ƒ shift()slice: ƒ slice()some: ƒ some()sort: ƒ sort()splice: ƒ splice()toLocaleString:
+   ƒ toLocaleString()toReversed: ƒ toReversed()toSorted: ƒ toSorted()toSpliced: ƒ toSpliced()toString: ƒ toString()unshift: ƒ unshift()values: 
+   ƒ values()with: ƒ with()Symbol(Symbol.iterator): ƒ values()Symbol(Symbol.unscopables): {at: true, copyWithin: true, entries: true, fill: true, find: true, …}
+   [[Prototype]]: Object
+
+
+
+   //acces list node 
+   obj
+NodeList(4) [li, li, li, li]
+0:li
+1:li
+2:li
+3:li
+[[Prototype]]: NodeList
+
+//select single list item
+const obj=document.querySelector('li')
+undefined
+obj
+<li>
+    ::marker​
+    "CN"
+</li>   
+
+//in this parent node and child
+const obj=document.querySelector('ul li')
+undefined
+obj
+<li>​
+   ::marker​
+   "cn"
+</li>​
+
+const obj=document.querySelectorAll('ul li')
+undefined
+obj
+NodeList(4) [li, li, li, li]
+0:li
+1:li
+2:li
+3:li
+
+
+
+//***************************//
+
+D:Accesing by tag name
+method document.getelementsby tagname(tagname )
+description returns a live html collection of all elemnt with the
+specified tag name (div  p  a)
+
+
+document.gerelementbytagname('h1');
+HTMLCollection [h1#first.header1, first: h1#first.header1]
+first.js:12 HTMLCollection [h1#first.header1, first: h1#first.header1]
+
+provide html collection which is 
+
+const tea=document.getElementsByTagName('li')
+undefined
+tea[0]
+<li>​::
+marker​
+"cn"</li>​
+
+//igterate on using tagname
+
+for(i=0;i<tea.length;i++)
+    tea[i].style.color="black"
+'black'
+
+const tea=document.getElementsByTagName('li')
+undefined
+tea[0]
+<li>​…​</li>​
+
+
+
+for(i=0;i<tea.length;i++)
+    console.log(i)
+VM1035:2 0
+VM1035:2 1
+VM1035:2 2
+VM1035:2 3
+
+
+//acces all element
+for(let val of tea)
+    console.log(val)
+VM1275:2 <li style=​"color:​ black;​">​…​</li>​::marker​"cn"</li>​
+VM1275:2 <li style=​"color:​ black;​">​…​</li>​
+VM1275:2 <li style=​"color:​ black;​">​…​</li>​
+VM1275:2 <li style=​"color:​ black;​">​…​</li>​
+undefined
+
+//convert to array
+Array.from(tea).forEach((val)=>{
+    console.log(val)})
+VM1585:2 <li style=​"color:​ black;​">​…​</li>​
+VM1585:2 <li style=​"color:​ black;​">​…​</li>​
+VM1585:2 <li style=​"color:​ black;​">​…​</li>​
+VM1585:2 <li style=​"color:​ black;​">​…​</li>​
+undefined
+
+//********************************//
+
+E:Accesing using relationships 
+1:parents node 
+method element parentnode or element parentelement
+description Access the immediate parent of an element 
+
+2:child node
+method:element childnodes (include texr nodes) or element children  (only element node)
+description access all child nodes of an element
+
+3:first and last child
+method element.firstchild, element.lastchild,
+element.firstelementchild, element.lastchild
+
+
+4:sibling nodes
+method element nextsibling,element.previoussibling
+element sibling:element.nextelementsibling
+element.previouselementsibling
+
+
+const list=document.querySelector('li');
+console.log(list);
+
+//select parent element and li
+const list=document.querySelector('li');
+console.log(list.parentElement);
+
+
+
+
+//***//
+in html colllection me html element milte hai 
+node list me space bhi as a text count hota hai next line text element bhi milte hai 
+
+
+//different types to use
+innerHTML show all things
+
+textContent show text and adding extra property show all if its display none
+
+innerText this is using adding prperty then show only screen me visible 
+
+
+
+document.getElementById('second').innerText
+'topics pa covered so far'
+document.getElementById('second').textContent
+'topics pa covered so far '
+document.getElementById('second').innerHTML
+'topics <strong>pa</strong> covered so far '
+
+    <h2 id="second" class="header1">topics <strong style="display: none;">pa</strong> covered so far </h2>
+after this
+ocument.getElementById('second').innerHTML
+'topics <strong style="display: none;">pa</strong> covered so far '
+document.getElementById('second').textContent
+'topics pa covered so far '
+document.getElementById('second').innerText
+'topics covered so far'

@@ -1,0 +1,45 @@
+body{
+    margin: 0;
+    background-color: rgb(120, 47, 208);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+h1{
+    text-align: center;
+}
+.container{
+    height: 80%;
+    width: 500px;
+    background-color: rgb(250, 252, 233);
+    position: relative;
+    
+}
+.board{
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+   
+}
+.cell{
+    position:relative;
+  left: 50px;
+    height: 150px;
+    width: 150px;
+    font-size: 40px;
+    text-align: center;
+    /* border: 1px solid black; */
+    box-shadow: 8px 8px 19px rgb(31, 17, 17);
+}
+#Restartbutton{
+    background-color: rgb(45, 214, 45);
+    height: 50px;
+    width: 100%;
+    font-size: 20px;
+    position: absolute;
+    bottom: 300px;
+    /* right: 40%; */
+    cursor: pointer;
+}

@@ -1,0 +1,21 @@
+event says that you are clicking in a web page and then some action perform 
+its called event
+//---event listener---//
+1:clicking
+2:dblclick
+3:mouseover
+4:mousemove
+
+
+//keyboard event//
+1:keydown
+2:keyup
+
+
+//event object//
+1:event
+2:event.target
+3:event.type
+4:event.key
+5:event.clientx
+6:event.clienty

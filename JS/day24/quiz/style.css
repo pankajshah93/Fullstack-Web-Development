@@ -1,0 +1,23 @@
+body{
+    background-color: azure;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    height: 100vh;
+}
+h1{
+    text-align: center;
+}
+.container{
+   background-color: rgb(241, 239, 235);
+    border: 2px solid black;
+    height: 100%;
+    width: 40%;
+}
+button{
+ cursor: pointer;
+    height: 30px;
+    width: 100%;
+    background-color: rgb(65, 173, 244);
+}

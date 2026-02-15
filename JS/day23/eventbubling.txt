@@ -1,0 +1,14 @@
+event bubling 
+ first child 
+apply eventlisner in chilid then child first print
+
+ second parent
+apply eventlisner in parent then this print after child its 
+execute all area of  parent in clude child
+
+third grand parent
+apply eventlisner is grand parent its print last and its also apply in all the part of parent and
+child
+
+//if apply all then click parent then print parent first and then grand parent
+//if click on child then print first child parent grand parent

@@ -1,0 +1,27 @@
+function timing(){
+const timer=document.getElementById('root');
+const now = new Date();
+const Indiantime=now.toLocaleTimeString();
+timer.innerHTML = Indiantime;
+}
+setInterval(timing,1000)
+// timing();
+
+//while true is not work its crash the code
+// while(true){
+//     timing()
+// }
+
+
+const timer=document.getElementById('root');
+const now = new Date();
+const Indiantime=now.toLocaleTimeString();
+timer.innerHTML = Indiantime;
+
+timer.style.fontSize="200px";
+timer.style.display="flex";
+timer.style.height="100vh";
+timer.style.justifyContent="center";
+timer.style.alignItems="center";
+// timer.style.backgroundColor="orange";
+

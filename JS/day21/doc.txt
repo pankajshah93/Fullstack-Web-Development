@@ -1,0 +1,35 @@
+//create a node//
+1:create a element
+2:create a text node
+3:create a attribute node
+
+
+
+//accessing attribute//
+1.getattribute
+2:setattribute
+3:removeattribute
+
+
+//add node to the dom//
+
+1:appendchild(node)
+adds a node as the last child of the parent.
+2:append(node1,node2....)
+adds multiple node as the last child of a parent,
+3:insertbefore(newnode,referencenode)
+4:prepend
+5:replacechild()
+6:using innerhtml
+directly sets the html content of an element.
+7:using insertAdjacentHTML() or insertAdjacentElement();
+
+beforebegin:before the element itself,
+afterbegin:inside the element,before its first child,
+beforeend:inside the element,after its last child,
+afterend:after tbe element itself,
+
+
+8:removeChild(node)
+9:The .remove() method in javascript is used to remove an element from the
+dom (document object model)

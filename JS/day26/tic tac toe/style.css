@@ -1,0 +1,49 @@
+body{
+    margin: 0;
+    background-color: rgb(120, 47, 208);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+h1{
+    text-align: center;
+}
+.container{
+    height: 80%;
+    width: 500px;
+    background-color: whitesmoke;
+    
+}
+.board{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+   
+}
+.cell{
+    height: 100px;
+    width: 100px;
+     position:relative;
+     left: 30px;
+    font-size: 80px;
+    text-align: center;
+    /* border: 1px solid black; */
+    box-shadow: 5px 5px 18px  #888888;
+}
+#Restartbutton{
+    background-color: rgb(45, 214, 45);
+    height: 50px;
+    width: 200px;
+    font-size: 20px;
+    position: absolute;
+    bottom: 200px;
+    right: 40%;
+    cursor: pointer;
+}
+.winning_message{
+    position: absolute;
+    top: 70%;
+    text-align: center;
+    font-size: 30px;
+}

@@ -1,0 +1,2 @@
+fetchdata(greet);
+fetchdata(meet);
