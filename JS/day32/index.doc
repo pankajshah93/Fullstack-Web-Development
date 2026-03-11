@@ -1,0 +1,15 @@
+<-Reastarent info-->
+1 :img
+2 :name
+3: rating 
+4: food type
+5 prize
+6 location 
+7 offer
+8 distance from user
+9 alchohol serve 
+10  opening and closing time
+11 prize for two
+
+all Reastarent information as object
+all object in as arr

@@ -1,0 +1,128 @@
+/* body */
+body{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+/* heading section */
+#head{
+    background-color: #2f2f2f;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px;
+}
+
+#head div{
+    background-color: #16a34a;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* root grid */
+#root{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    padding: 30px;
+}
+
+/* card */
+.card{
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* image */
+.card img{
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+/* content */
+.card-content{
+    padding: 15px;
+}
+
+/* header */
+.card-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.card-header h3{
+    margin: 0;
+    font-size: 16px;
+}
+
+.rating{
+    background-color: orange;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+/* footer */
+.card-footer{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+/* location */
+.card-location{
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: gray;
+}
+/* #filterSort{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+} */
+/* Hide by default */
+.hidden {
+    display: none;
+}
+
+/* Background overlay */
+#filterSort {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 300px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+/* Optional dark background */
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    display: none;
+}
+
+/* When popup active */
+body.show-popup::after {
+    display: block;
+}

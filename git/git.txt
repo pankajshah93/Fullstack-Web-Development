@@ -1,0 +1,216 @@
+Git : version control system
+
+1:code update kiya ,or website crash ho gayi,coder ko code revert back karna hoga
+2:Ownership of code (how to itentify its your code or not)
+
+///in this two problem can be solved using tracker 
+i:in this tracker store name,time (kab or kitne time code likha  gaya fir us time pe jakar oos code ko delete kar do)
+
+/---this tracker nothing GIT hi hai 
+git track all information related code
+
+for example:a code write in different time and at the time code crash then before crsh code was deleted 
+1pm const name="pankaj
+2pm const name ="pankaj"
+    const age= 23
+3pm const name ="pankaj"
+    const age= 23
+    cosnt sem=2 
+4pm const name ="pankaj"
+    const age= 23
+    cosnt sem=2 
+    cosnt year = 1
+
+//if your code crash 4pm then remove this updated code 
+this timing information stored by git     
+
+
+//--first install --//
+and check version git --version
+//set user name and mail id for user identification for this is show in your code
+//git config --global user.name"pankaj";
+//git config --global user.emailid"pankajshah@gmail.com"
+
+verifying configration
+git config --list 
+
+//after that this git set into one file to track
+usig:= git init
+
+cd file name enter file
+
+after that create a .git  file in your selected folder
+
+after that your file ahead show U(means untracked)
+then git add file name(. using dot all of this add )
+after add this file is track(ahead show A)
+
+
+after add chect status = git status
+
+then commit = git commit -m "changes coment in this section " 
+
+your file is commit then push into github git push origin main
+
+
+after some time you add more thing then repeat the add/commit /push 
+
+
+//--if yoiu want to see your changes then command : git diff
+using this git diff exact changes show 
+in this showing all changes scroll down see all changes "at the end press Q to end this"
+
+using this lens show time of commit and  what commit 
+
+
+use stage area if you add file in stage area if some work are not done then restore staged/unstaged
+using this command:  git reset filename
+then he is modified stage /remove stage 
+
+in this all cmmit is called master branch
+one commit is called branch
+last commit is  head 
+
+
+//git using this command :git log (show all commit name author date time commit  commit id)
+//using command :git log --oneline (show oneline details id first 8 character and commit)
+//if you want to show all information what changes and which file changes then use command:git show id commit
+//using git reset --hard commit id 8 character (delete current head point its pont previous branch)
+
+
+//changes in all files html/css/js if some change we dont need
+//our website we create a many thing one by one and then commit if want to remove in middle commit 
+
+//if we want to change the middle then we can not use: git reset --hard 
+because use this all are delete (last se middle tak sab delete but we want only middle)
+
+//--git revert haxcode id (specific you want to delete)
+then add. commit (taki new meassage show ho jaye)
+
+//--in this git revert use only revert changes of spaecific comiit  
+jo oos commit me change hua tha usko hata deta hai and isko new commit me shiow karta hai
+ye sirf oos code ko hata deta hai jo commit kiya gaya tha
+
+
+
+
+
+//----Branching concept----///
+in master branch is main brach is working on my main website if you change this then its show i current website 
+so create copy/new brach and change if its work then chage master brach and then complete and then merge 
+problem:
+our branch is called master branch  if we create payment gateway in master branch after some time payment gateway not working give
+bug then commit bug and then revert the payment gatwate branch then more branch add (isse branches bahut jyada badh jati hai kyuki kam kartye time galti hote 
+rahega or commit or revert karne se commit bahut jyada ho jayega)
+solution:
+create a copy of this master branch and create payment gateway if this succesfull create then merge the both branches
+
+
+
+//--how to create a new branch---//
+git checkout -b "new branch name"
+check branch:git branch
+using this branch swith to newly created branch
+
+after that we have two branches 
+master and new branch name
+//work on this new branch and then check its work proper or not if its work prper then merge 
+first switch to master commad:git checkout master
+ans then command: git merge new branch name
+
+in the new branch not change the master branch you work only this branch if brach change then remove changes
+
+
+//---merge conflict---//
+if we work on create a new branch and new commit added 
+and also add new commit in master branch then  
+after that you merge the both branches then show branch conflict in this we select one option what changes you do 
+then after  new commit and change 
+
+go to master branch and then :git merge new file 
+create conflict choose one option after that modified your file ad then commit
+
+after merge was done then creating branch was delete 
+using :git branch -D branch name
+if value is update then conflict nahi deta hai
+
+
+
+
+///---Rebasing ---////
+const button =  "added a button";
+console.log(button);
+
+const login ="login page added "
+console.log(login)
+
+const footer = "bottom of the code"
+console.log(footer)
+const payment = "integrate paymen"
+console.log(payment);
+const upi = "upi added"
+console.log(upi)
+
+Rebase (Git) = move your branch on top of another branch
+A---B---C  main
+     \
+      D---E  feature
+A---B---C---D'---E'  feature    
+command:
+git checkout feature
+git rebase master
+
+after that don't commit 
+//-- git rebase --continue
+
+
+after show message 
+
+feature Added   (in this time press [i] for insert mode on then write feature(branch name) updated after footer(in js file const footer))
+in upper conflict:
+
+after save and quiet
+using this command:  :wq
+
+after that: git rebase --continue 
+upi Added : upi done
+
+using this add all changes in different commit in single line 
+
+only rebase D so after continue 
+because after that only one commit was merge all feature commit not add 
+so continue rebase 
+using this no extra merge commit and clean  history (in your history become a linear)
+
+git remote add origin https://github.com/pankajshah93/new-git-demo.git
+git branch -M main
+git push -u origin main
+
+this is only one time write 
+after that only 
+git add .
+git commit -m ""
+git push
+
+
+if i cahnged in new branch create and push to main
+
+using command:  git push -u origin bugfix(branch name)
+this branch go to repositary
+
+if you are working in group then dont change directly in main branch 
+first create branch and change 
+
+after that pull request erase karo and your senior reviw your code and give aproval and then merge
+
+after update then apne system me bhi update kar do
+git pull origin main
+
+if your work is complete then 
+delete in repo also delete in systemusin this code :git push origin ---delete branch name
+
+git stash
+
+git pull --rebase origin main
+git branch -r
+git push origin --delete feature
