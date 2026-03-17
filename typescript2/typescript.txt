@@ -1,0 +1,638 @@
+//problem of javascript//
+let balance = 30;
+
+balance = "thirty"
+console.log(balance*30);
+in this show NaN (not a number)
+in this programing any change there value balance inteher to string then its show not a number 
+but it show error
+
+let age = 30;
+
+age = "thirty"
+console.log(age);
+in this is show thirty change value 
+
+
+let obj = {
+    name : "pankaj",
+    age :  23,
+}
+console.log(obj.len)/(obj.height)
+in this object not in this type of value to bhi vo print kara raha hai undefined 
+but usse error shoe karna chahiye
+
+javascript run if property is not exist      
+
+//---in type script you declare variable type and you ony store same type value 
+
+in typescript : = you can define type so this name was type script
+jo bhi use kar rahe hai uska type batana padega
+
+//--our browser not understand typescript so its need to convert into 
+javascript using compiler
+
+// install typescript compiler
+// command: npm install -g typescript (-g means globally)
+in window if problem : run as admin/in mac sudo  npm install -g typescript
+in window open powershell as administrator and giv command :Set-ExecutionPolicy RemoteSigned
+and then type :Y
+
+check version : tsc -v(check version)
+
+
+//in the vs code convert typescript file to js file 
+comand : tsc (ts file name) but its convert old version of javascript so you say 
+
+comand : tsc filename.ts --target es2016 /tsc styel.ts --target es2016
+its convert into 2016 verstion
+
+this work not do every time so create a config file where all information give
+CONFIG FILE AT TIME of convert see in config there set version and all details and then change
+comand : tsc --init
+
+after that you have only write : tsc then its automaticaly changed
+
+after if any one try to change type of int variable at time show error
+but if you convert then its convert (but show error in compile time)
+
+//number
+let a:number = 23;
+let b:number = 34;  
+
+//string
+let str:string ="pankaj";
+
+//bolean
+let isexit:boolean = true;
+isexit =false;
+
+//big int
+let bignu:bigint = 12334433432343n;
+this number is to big and big int is not in es2016 so change target year to 2020 in config
+//null
+let abc:null = null;
+let bcd:undefined =  undefined;
+//in this variable you can not assign any value f you asssign then 
+// show error 
+
+//---use tsc --watch command --//
+using this your typescript automatically convert into js
+
+if you want to exit then control+c
+
+<-type inference in typescript refers to the ability to 
+the typescript compiler to automatically determine the type 
+ type of variable based on the value assign to its
+ these means that even if you don't expicitly 
+ specifies type,typescript refer to the most apropriate
+ type and apply-->
+ let age = 25 //typescript infere to number type
+ let name = "pankaj"//typescript infer to a string
+
+
+<<--any and unknown two type of explicit-->>
+
+//if declare variabel but not assign after assing 
+//its type is any any value assign
+let other;//by default let other:any;
+other = 23;
+other = "name";
+console.log(other.toUpperCase);
+
+
+//in this also not declare type any value assinged
+let name:unknown;
+name = 23;
+name = "rohit";
+
+if(name === "string")
+console.log(name.toUpperCase);
+
+at the time of operation you directly perform without 
+checcking type in type any case
+
+but unknown case you don't have acces and do not apply any operation
+without checcking there type
+
+//in this avoid any case use 
+//use unknown case when you don't know the type of variable
+after operation time check and then apply operation
+according to there type
+
+
+//non primitve 
+//array
+
+let arr:number[] = [2,4,1,5];
+let arr2 = [4,6,7,8];//in array automaticaly declare and known about there type
+
+let  arr3:(string | number)[] = ["name",3,"sohan",34];//if string and number are mix then also infer there type
+let arr4 = ["name",53,"soh",34];
+
+let arr5:(string | number | boolean)[]= ["name",true,45];
+let arr6 = ["name",true,56];
+
+
+//javascript is JIT - just in time (combination of compiled  and interpreated language)
+
+its interpreated line by line 
+but in function call many times and any loop work on many  times 
+then paralel convert into machine code and give machine code to cpu
+
+//object
+//inline declare
+//in this object are also take type
+let obj = {
+    name : "pankaj",
+    age: 34,
+    add: "gautam nagar"
+}
+let obj:{name:string,age:number,add:string} = {
+    name : "pankaj",
+    age: 34,
+    add: "gautam nagar"
+}
+
+//its mandatory to fill all given ttpe
+let person:{name:string,age:number};
+person={
+    name : "pankaj",
+    age : 23,
+
+}
+
+//first define type and create object
+type customer= {
+    name:string,
+    age:number,
+    add:string,
+}
+let c1:customer ={
+    name:"pankaj",
+    age:56,
+    add:"weew",
+}
+
+//using interface create object
+interface acc{
+    name:string,
+    accc:number,
+    add:string,
+}
+let objs:acc={
+    name:"pankaj",
+    accc:34,
+    add:"sds",
+}
+
+
+<<--we use interface -->>
+because you write multiple times in same name and use 
+merge there variable type
+
+interface acc{
+    name:string,
+    accc:number,
+    add:string,
+}
+interface acc{
+    id:number,
+}
+let objs:acc={
+    name:"pankaj",
+    accc:34,
+    add:"sds",
+    id:34,
+}
+## 1. Interface (TypeScript)
+
+**Meaning:**
+Interface defines the **shape of an object**.
+
+**Example**
+
+```ts
+interface User {
+  name: string;
+  age: number;
+}
+
+let person: User = {
+  name: "Pankaj",
+  age: 22
+};
+```
+
+**Use:**
+
+* Object structure
+* Class contract
+* Extend interface
+
+```ts
+interface A {
+  x: number;
+}
+
+interface B extends A {
+  y: number;
+}
+```
+
+---
+
+## 2. Type (Type Alias)
+
+**Meaning:**
+Type creates a **new name for any type**.
+
+**Example**
+
+```ts
+type User = {
+  name: string;
+  age: number;
+};
+```
+
+**Union example**
+
+```ts
+type ID = string | number;
+```
+
+**Tuple example**
+
+```ts
+type Point = [number, number];
+```
+
+---
+
+## 3. Difference
+
+| Interface        | Type                       |
+| ---------------- | -------------------------- |
+| Used for objects | Used for any type          |
+| Can extend       | Can use union/intersection |
+| Used in OOP      | More flexible              |
+
+Example:
+
+```ts
+interface Car {
+  name: string;
+}
+
+type ID = string | number;
+```
+
+---
+
+✅ **Simple rule**
+
+* **Interface → object structure**
+* **Type → any type (union, tuple, primitive)**
+
+---
+
+using interface
+interface person{
+    name:string,
+    age:number,
+    add:string
+}
+let obj:person = {
+    name:"pankaj",
+    age:23,
+    add:"gautam nagar",
+}
+without question mark all variabe fill mandatory 
+using this question mark  this aadhar variable is 
+optional to filed or not 
+
+if any data you define not manadatory then set as optional  using question mark
+interface person{
+    name:string,
+    age:number,
+    add:string
+    addhar?:number
+}
+let obj2:person = {
+    name:"pankaj",
+    age:23,
+    add:"gautam nagar",
+}
+
+
+
+//extend keyword 
+extends → inherit from class
+//its is extend property of one interface to another
+//one interface property use in another interference
+//using this code reusabulity increase 
+interface person{
+    name:string,
+    age:number
+}
+interface human extends person{
+    salry:number,
+    id:number,
+}
+interface bankemployee extends person{
+    position:string,
+    salary:number
+}
+let obj5:bankemployee = {
+    position:"manager",
+    salary:233,
+    name:"pankaj",
+    age:23,
+    add:"age"
+
+}
+let coll:human ={
+    name: "pankaj",
+    age: 32,
+    salry: 234,
+    id: 23,
+    add: "gautam",
+}
+
+
+
+
+interface customer{
+    name:string,
+    age:number,
+    add:string
+}
+// using partial all vraible become a optional 
+// if not fill then not show error
+// 1.partial (optional)
+// 2.required(mandatory)
+// 3.readonly(you can only read this can not change after assign)
+let acc:Partial<customer> = {
+    name:"pankaj",
+}
+let acc2:Required<customer> = {
+    name:"pankaj",
+    age:34,
+    add:"nagar"
+}
+let acc3:Readonly<customer> = {
+    name:"pankaj",
+    age:98,
+    add:"janah"
+}
+// acc3.name  =  "kunal" in this can not assing 
+
+
+//arr of object
+
+
+let arr = [{name:"pankaj",age:"76"}];
+
+let arr2:{name:string,age:number}[] = [{name:"pankaj", age:76}]
+
+interface people {name:string,age:number};
+let arr3:people[] = [{name:"pankaj",age:34},{name:"kunal",age:43}]
+
+
+let arr4: ({
+    name: string;
+    age: number;
+    id?: never;
+    token?: never;
+} | {
+    id: number;
+    token: number;
+    name?: never;
+    age?: never;
+})[]
+nterface people {name:string,age:number};
+// let arr3:people[] = [{name:"pankaj",age:34},{name:"kunal",age:43}]
+
+interface guest{id:number,token:number}
+let arr4 = [{name:"pankaj",age:34},{id:23,token:12}]
+//two more interface combine and take text 
+
+
+
+
+//function in ts
+
+// function meet(a){
+//     console.log(a);
+//     return a+5;
+// }
+// if you not mention type of parameter then its automatically take any  so mention there type 
+function meet(a:number):number{
+    console.log(a);
+    return a+5;
+}
+// in this function return as number return sonmting also give there type
+meet(5);
+
+// function geet(msg:string,val:number){
+//     console.log(msg,val);
+// }
+// geet("pankaj",23);
+// this function not return then its type is void
+
+function geet1(msg:string,val:number):void{
+    console.log(msg,val);
+}
+geet1("pankaj",23);
+
+
+
+// funtions parameter
+function neet(s:string = "name"){
+    console.log(s);
+}
+// neet();//in this print name if not pass value default parameter
+neet("pankaj");//any word pass and  then its print
+
+//optional parameter
+
+function git(s?:string){
+    console.log(s||"mohan")
+}
+git();
+git("pankaj");
+
+
+//arrow funtion 
+
+const sum = (a:number,b:number):number=>{
+    return a+b;
+}
+console.log(sum(5,6));
+
+// (amount)=>{
+//     console.log(amount);
+// }
+// in this is callback function mention type
+
+// (amount:number)=>void//place of this use type
+type chill= (amount:number)=>void;
+
+function placeholder(order:number,callback:(amount:number)=>void){
+    const amount:number = order+20;
+    callback(amount);
+}
+placeholder(10,(amount)=>{
+    console.log(amount);
+})
+
+
+
+
+
+
+//class in typescript 
+
+
+class person{
+    name:string;
+    age:number;
+    constructor(n1:string,n2:number){
+        this.name = "n1";
+        this.age = n2;
+    }
+    //in class function/method define 
+    //in this not write ahead function 
+    //function ko samne nahi likhte hai class me jab
+    //function banate hai to
+    meet():void{
+        console.log(`hi ${this.name}`)
+    } 
+}
+//after that create obj multiple time create
+const obj1 = new person("pankaj",23);
+const obj2 = new person("brij",45);
+console.log(obj2);
+console.log(obj1);
+
+
+
+
+
+
+///---<<<< using tsc all ts file are are run so  another ts file same name property acces-->>>>//
+tsc sari file ko run karta hai
+
+
+
+//public private protected
+
+//in  js only public 
+//but in ts all are avilable
+class customer{
+    //by default public
+   public name:string;
+   private age:number;
+    balance:number;
+
+      constructor(name:string,age:number,balance:number){
+        this.name = name;
+        this.age = age;
+        this.balance = balance;
+      }
+      //this function also set as public private protected
+      //do not acces in outsinde
+      geet():number{
+        this.age = this.age + 10;
+        return this.age;
+      }
+}
+const objs = new customer("pankaj",23,3455);
+console.log(objs.name);
+//using private any one can not change value outside the class
+//using objs.name only change in class
+console.log(objs.geet());
+console.log(objs.balance)
+
+
+
+
+//in this class inherit the prperty of another class using extemd
+class employee extends customer{
+    salary:number;
+
+    constructor(salary:number,name:string,age:number,balance:number){
+        super(name,age,balance)
+        this.salary = salary;
+    }
+}
+
+const p1  = new employee(234,"pankaj",23,456);
+console.log(p1);
+
+
+
+
+
+class customer{
+    //by default public
+   public name:string;
+   private age:number;
+   protected balance:number;
+   //only child class access protected 
+
+      constructor(name:string,age:number,balance:number){
+        this.name = name;
+        this.age = age;
+        this.balance = balance;
+      }
+      //this function also set as public private protected
+      //do not acces in outsinde
+      geet():number{
+        this.age = this.age + 10;
+        return this.age;
+      }
+      meet():number{
+        console.log("hello");
+        return 10;
+      }
+}
+const objs = new customer("pankaj",23,3455);
+console.log(objs.name);
+//using private any one can not change value outside the class
+//using objs.name only change in class
+console.log(objs.geet());
+// console.log(objs.balance)
+
+
+//in this class inherit the prperty of another class using extemd
+class employee extends customer{
+    salary:number;
+
+    constructor(salary:number,name:string,age:number,balance:number){
+        super(name,age,balance)
+        this.salary = salary;
+    }
+    //another class can not acces private member
+    // geet():number{
+    //     this.age = this.age + 10;
+    //     return this.age;
+    //   }
+    
+    //but protected can be acces by another class 
+    //member function
+    geet():number{
+        this.balance = this.balance + 10;
+        return this.balance;
+      }
+       meet():number{
+        console.log("hello");
+        return 11;
+      }
+
+}
+
+const p1  = new employee(234,"pankaj",23,456);
+console.log(p1);
+console.log(p1.meet());//function overloading so first meet run then after parent class
